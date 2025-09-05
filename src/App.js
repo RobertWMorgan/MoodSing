@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import React, { useState, state, useEffect } from 'react';
+import { moods } from './Data/Data.js';
 
 function App() {
+  const [ moodSelected, setMoodSelected ] = useState(false)
+  const [ loading, isLoading ] = useState(true)
+
   return (
-    <div className="App">
+    <body className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>MoodSing!</h1>
       </header>
-    </div>
+      <main>
+        <ul className='mood-list'>
+          {moods.map(mood => <button key={mood} className={`${mood} mood-selector`}>{mood}</button>)}
+        </ul>
+      </main>
+    </body>
   );
 }
-
 export default App;

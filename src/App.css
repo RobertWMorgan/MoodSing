@@ -2,18 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,17 +11,61 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.mood-list{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding: 0;
+}
+
+.mood-selector{
+  margin: 10px;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #282c34;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.mood-selector:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.Calm{
+  border-color: #65aca6;
+  color: #65aca6;
+}
+
+.Cheerful{
+  border-color: #FF9F1C;
+  color: #FF9F1C;
+}
+
+.Energetic {
+  border-color: #EF233C;
+  color: #EF233C;
+}
+
+.Moody {
+  border-color: #2a4d7e;
+  color: #2a4d7e;
+}
+
+.Silly{
+  border-color: #ff6bce;
+  color: #ff6bce;
 }
